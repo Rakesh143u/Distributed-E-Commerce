@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = "inventory-service",url="http://localhost:8083")
+@FeignClient(name = "inventory-service")
 public interface InventoryClient {
     @GetMapping("/inventory/{id}")
     Integer getStock(@PathVariable Integer id);
